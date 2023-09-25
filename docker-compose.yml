@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  mongo:
+    networks:
+      - "backend"
+    volumes:
+      - db-data:/etc/database
+    image: mongo:6-jammy
+    ports:
+      - 27017:27017
+
+volumes:
+  db-data:
+
+networks:
+  backend: 
