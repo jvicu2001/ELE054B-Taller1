@@ -6,6 +6,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ClienteRepository extends MongoRepository<Cliente, String> {
+public interface ClientesRepository extends MongoRepository<Cliente, String> {
     List<Cliente> findByEstado(@Param("estado") String estado);
 }
